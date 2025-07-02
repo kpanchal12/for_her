@@ -71,3 +71,37 @@ h1 {
   font-size: 1.1rem;
   text-align: center;
 }
+/* 📱 Mobile styles for flip card layout */
+@media only screen and (max-width: 600px) {
+  body {
+    padding: 20px;
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr; /* Stack cards vertically */
+    gap: 15px;
+  }
+
+  .card {
+    height: 180px;
+  }
+
+  .card-front,
+  .card-back {
+    font-size: 1rem;
+    padding: 15px;
+  }
+
+  .card-back > div {
+    max-width: 100%;
+    font-size: 0.95rem;
+  }
+}
+
