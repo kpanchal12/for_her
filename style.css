@@ -71,37 +71,44 @@ h1 {
   font-size: 1.1rem;
   text-align: center;
 }
-/* 📱 Mobile styles for flip card layout */
+/* 📱 Mobile Responsive: Flip Card Layout */
 @media only screen and (max-width: 600px) {
   body {
     padding: 20px;
-    font-size: 14px;
   }
 
   h1 {
-    font-size: 1.6rem;
-    margin-bottom: 20px;
+    font-size: 1.4rem;
     text-align: center;
   }
 
   .card-grid {
-    grid-template-columns: 1fr; /* Stack cards vertically */
-    gap: 15px;
+    display: grid;
+    grid-template-columns: 1fr; /* Stack cards in 1 column */
+    gap: 16px;
   }
 
   .card {
-    height: 180px;
+    height: auto; /* Allow height to grow */
+    min-height: 180px;
+  }
+
+  .card-inner {
+    height: 100%;
   }
 
   .card-front,
   .card-back {
     font-size: 1rem;
-    padding: 15px;
+    padding: 16px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: center;
   }
 
   .card-back > div {
-    max-width: 100%;
     font-size: 0.95rem;
+    max-width: 100%;
   }
 }
 
